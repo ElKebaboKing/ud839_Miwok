@@ -17,6 +17,7 @@ package com.example.android.miwok;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 
 public class NumbersActivity extends AppCompatActivity {
 
@@ -27,5 +28,9 @@ public class NumbersActivity extends AppCompatActivity {
 
         // Create array of words
         String[] words = {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"};
+
+        // Write all the values at each index to the logcat
+        for(int i = 0; i < 10; i++)
+            Log.v("NumbersActivity", "Word at index " + i + ": " + words[i]);
     }
 }
