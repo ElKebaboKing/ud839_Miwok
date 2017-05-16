@@ -19,6 +19,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class NumbersActivity extends AppCompatActivity {
 
     @Override
@@ -27,10 +30,10 @@ public class NumbersActivity extends AppCompatActivity {
         setContentView(R.layout.activity_numbers);
 
         // Create array of words
-        String[] words = {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"};
+        ArrayList<String> words = new ArrayList<String>(Arrays.asList("one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"));
 
         // Write all the values at each index to the logcat
         for(int i = 0; i < 10; i++)
-            Log.v("NumbersActivity", "Word at index " + i + ": " + words[i]);
+            Log.v("NumbersActivity", "Word at index " + i + ": " + words.get(i));
     }
 }
