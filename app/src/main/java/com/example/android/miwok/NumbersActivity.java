@@ -32,8 +32,6 @@ public class NumbersActivity extends AppCompatActivity {
         // Create array of words
         ArrayList<String> words = new ArrayList<String>(Arrays.asList("one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"));
 
-        // Write all the values at each index to the logcat
-        for(int i = 0; i < 10; i++)
-            Log.v("NumbersActivity", "Word at index " + i + ": " + words.get(i));
+        
     }
 }
