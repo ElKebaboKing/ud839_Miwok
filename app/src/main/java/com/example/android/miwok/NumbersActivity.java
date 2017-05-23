@@ -37,7 +37,7 @@ public class NumbersActivity extends AppCompatActivity {
         // Create array of words
         ArrayList<String> words = new ArrayList<String>(Arrays.asList("one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"));
 
-        ArrayAdapter<String> itemsAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, words);
+        ArrayAdapter<String> itemsAdapter = new ArrayAdapter<String>(this, R.layout.list_item, words);
 
         ListView listView = (ListView) findViewById(R.id.list);
 
