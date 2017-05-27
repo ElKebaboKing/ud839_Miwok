@@ -6,13 +6,21 @@ package com.example.android.miwok;
 
 public class Word {
     // Default and Miwok translation for the word
-    private String mDefaultTranslation, mMiwokTranslation;
+    private String mDefaultTranslation, mMiwokTranslation, mImageResourceId;
 
     // Constructor
     public Word(String defaultTranslation, String miwokTranslation)
     {
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
+    }
+
+    // Constructor with image
+    public Word(String defaultTranslation, String miwokTranslation, String imageResourceId)
+    {
+        mDefaultTranslation = defaultTranslation;
+        mMiwokTranslation = miwokTranslation;
+        mImageResourceId = imageResourceId;
     }
 
     // Returns the default translation of the word
@@ -26,4 +34,6 @@ public class Word {
     {
         return mMiwokTranslation;
     }
+
+    public String getImageResourceID () {return mImageResourceId;}
 }
