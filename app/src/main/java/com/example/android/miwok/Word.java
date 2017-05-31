@@ -7,21 +7,23 @@ package com.example.android.miwok;
 public class Word {
     // Default and Miwok translation for the word
     private String mDefaultTranslation, mMiwokTranslation;
-    int mImageResourceId;
+    private int mImageResourceId, mAudioResourceId;
 
     // Constructor
-    public Word(String defaultTranslation, String miwokTranslation)
+    public Word(String defaultTranslation, String miwokTranslation, int audioResourceId)
     {
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
+        mAudioResourceId = audioResourceId;
     }
 
     // Constructor with image
-    public Word(String defaultTranslation, String miwokTranslation, int imageResourceId)
+    public Word(String defaultTranslation, String miwokTranslation, int imageResourceId, int audioResourceId)
     {
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
         mImageResourceId = imageResourceId;
+        mAudioResourceId = audioResourceId;
     }
 
     // Returns the default translation of the word
@@ -36,5 +38,9 @@ public class Word {
         return mMiwokTranslation;
     }
 
+    // Returns the image resource id
     public int getImageResourceID () {return mImageResourceId;}
+
+    // Returns the audio resource id
+    public int getAudioResourceId () {return mAudioResourceId;}
 }
